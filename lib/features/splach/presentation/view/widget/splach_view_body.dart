@@ -6,11 +6,20 @@ class SplachViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
+      spacing: 8,
       children: [
         Image.asset(AssetsData.logo),
+        const Text(
+          "Read Free Books",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
     );
   }
