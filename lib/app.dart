@@ -1,11 +1,12 @@
+import 'package:bookly_app/features/splach/presentation/view/splach_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Bookly',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -13,16 +14,7 @@ class BooklyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: false,
       ),
-      home: Scaffold(
-        backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          title: const Text('Book'),
-        ),
-        body: const Center(
-          child: Text('Hello, Bookly!'),
-        ),
-      ),
+      home: const SplachView()
     );
   }
 }
