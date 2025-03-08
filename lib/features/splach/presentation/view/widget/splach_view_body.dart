@@ -1,4 +1,6 @@
 import 'package:bookly_app/core/util/constant/assets.dart';
+import 'package:bookly_app/core/util/constant/strings.dart';
+import 'package:bookly_app/core/util/routes/routes.dart';
 import 'package:bookly_app/features/splach/presentation/view/widget/sliding_text.dart';
 import 'package:flutter/material.dart';
 
@@ -16,9 +18,18 @@ class _SplachViewBodyState extends State<SplachViewBody>
   @override
   void initState() {
     super.initState();
+    initSlidingAnimation();
+    navigateToHome();
+  }
+
+  void navigateToHome() {
+    Future.delayed(kDelayDuration, () => AppRoutes.home);
+  }
+
+  void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: kSlidingDuration,
     );
     slidingAnimation = Tween<Offset>(
       begin: const Offset(0, 2),
