@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/util/constant/style.dart';
 import 'package:bookly_app/features/splach/presentation/view/widget/custom_app_bar.dart';
 import 'package:bookly_app/features/splach/presentation/view/widget/featured_books_list_view.dart';
 import 'package:flutter/material.dart';
@@ -7,11 +8,20 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomAppBar(),
-        FeaturedBooksListView(),
-      ],
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomAppBar(),
+          FeaturedBooksListView(),
+          SizedBox(height: 40),
+          Text(
+            "Best Sellers",
+            style: Styles.mediumText,
+          ),
+        ],
+      ),
     );
   }
 }
