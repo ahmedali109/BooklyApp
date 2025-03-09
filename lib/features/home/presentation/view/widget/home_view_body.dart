@@ -37,6 +37,7 @@ class BestSellerListViewItem extends StatelessWidget {
     return SizedBox(
       height: 150,
       child: Row(
+        spacing: 30,
         children: [
           AspectRatio(
             aspectRatio: 2.2 / 3.4,
@@ -50,6 +51,29 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
           ),
+          Column(
+            spacing: 10,
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.5,
+                child: const Text(
+                  "Harry Potter and the goblet of fire",
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.textStyle20,
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.5,
+                child: const Text(
+                  "J.K. Rowling",
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: Styles.textStyle20,
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
