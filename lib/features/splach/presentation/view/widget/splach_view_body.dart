@@ -1,5 +1,6 @@
 import 'package:bookly_app/core/util/constant/assets.dart';
 import 'package:bookly_app/core/util/constant/strings.dart';
+import 'package:bookly_app/core/util/routes/routes.dart';
 import 'package:bookly_app/features/splach/presentation/view/widget/sliding_text.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -26,7 +27,7 @@ class _SplachViewBodyState extends State<SplachViewBody>
     Future.delayed(
       kDelayDuration,
       // ignore: use_build_context_synchronously
-      () => GoRouter.of(context).push('/home'),
+      () => GoRouter.of(context).push(AppRoutes.kHome),
     );
   }
 
