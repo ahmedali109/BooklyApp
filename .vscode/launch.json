@@ -8,19 +8,28 @@
       "name": "Android",
       "type": "dart",
       "request": "launch",
-      "deviceId": "emulator-5554"
+      "deviceId": "emulator-5554",
+      "flutterMode": "debug"
     },
     {
-      "name": "IOS",
+      "name": "IOS Simulator",
       "type": "dart",
       "request": "launch",
-      "deviceId": "E700A929-C1AD-4E0B-B567-2C4610A5E84D"
+      "deviceId": "E700A929-C1AD-4E0B-B567-2C4610A5E84D",
+      "flutterMode": "debug"
+    },
+    {
+      "name": "IOS psychical",
+      "type": "dart",
+      "request": "launch",
+      "deviceId": "00008110-001C7C662284401E",
+      "flutterMode": "release"
     }
   ],
   "compounds": [
     {
       "name": "All",
-      "configurations": ["Android", "IOS"]
+      "configurations": ["Android", "IOS Simulator", "IOS psychical"]
     }
   ]
 }
