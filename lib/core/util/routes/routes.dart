@@ -1,11 +1,18 @@
-import 'package:bookly_app/core/util/constant/strings.dart';
 import 'package:bookly_app/features/home/presentation/view/home_view.dart';
-import 'package:get/get.dart';
+import 'package:bookly_app/features/splach/presentation/view/splach_view.dart';
+import 'package:go_router/go_router.dart';
 
-class AppRoutes{
-  static var home = Get.to(
-    () =>  const HomeView(),
-    transition: Transition.fade,
-    duration: kFadeDuration,
+abstract class AppRoutes {
+  static final route = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const SplachView(),
+      ),
+      GoRoute(
+        path: '/home',
+        builder: (context, state) => const HomeView(),
+      ),
+    ],
   );
 }
