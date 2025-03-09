@@ -1,5 +1,5 @@
-import 'package:bookly_app/core/util/constant/assets.dart';
 import 'package:bookly_app/core/util/constant/style.dart';
+import 'package:bookly_app/features/home/presentation/view/widget/best_seller_list_view_item.dart';
 import 'package:bookly_app/features/splach/presentation/view/widget/custom_app_bar.dart';
 import 'package:bookly_app/features/splach/presentation/view/widget/featured_books_list_view.dart';
 import 'package:flutter/material.dart';
@@ -23,57 +23,6 @@ class HomeViewBody extends StatelessWidget {
           ),
           SizedBox(height: 20),
           BestSellerListViewItem()
-        ],
-      ),
-    );
-  }
-}
-
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
-      child: Row(
-        spacing: 30,
-        children: [
-          AspectRatio(
-            aspectRatio: 2.2 / 3.4,
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                image: const DecorationImage(
-                  image: AssetImage(AssetsData.bookCover),
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ),
-          Column(
-            spacing: 10,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: const Text(
-                  "Harry Potter and the goblet of fire",
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: Styles.textStyle20,
-                ),
-              ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.5,
-                child: const Text(
-                  "J.K. Rowling",
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: Styles.textStyle20,
-                ),
-              ),
-            ],
-          )
         ],
       ),
     );
