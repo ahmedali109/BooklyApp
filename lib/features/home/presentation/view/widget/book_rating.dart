@@ -7,13 +7,13 @@ class BookRating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       spacing: 10,
       children: [
         const Icon(
           FontAwesomeIcons.solidStar,
-          color:  Color(0xffffdd4f),
+          color: Color(0xffffdd4f),
           size: 14,
         ),
         const Text(

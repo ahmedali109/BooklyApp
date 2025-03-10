@@ -29,7 +29,7 @@
   "compounds": [
     {
       "name": "All",
-      "configurations": ["Android", "IOS Simulator", "IOS psychical"]
+      "configurations": ["Android", "IOS Simulator"]
     }
   ]
 }
