@@ -21,7 +21,7 @@ class CustomAppBar extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                GoRouter.of(context).go(AppRoutes.kSearch);
+                GoRouter.of(context).push(AppRoutes.kSearch);
               },
               icon: const Icon(
                 FontAwesomeIcons.magnifyingGlass,
