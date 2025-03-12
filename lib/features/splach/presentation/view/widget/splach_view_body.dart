@@ -27,7 +27,7 @@ class _SplachViewBodyState extends State<SplachViewBody>
     Future.delayed(
       kDelayDuration,
       // ignore: use_build_context_synchronously
-      () => GoRouter.of(context).push(AppRoutes.kHome),
+      () => GoRouter.of(context).pushReplacement(AppRoutes.kHome),
     );
   }
 
