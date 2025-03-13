@@ -14,13 +14,12 @@ class BestSellerListView extends StatelessWidget {
     return BlocBuilder<NewsetNewsCubit, NewsetNewsState>(
       builder: (context, state) {
         if (state is NewsetNewsSuccess) {
-          return ListView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.zero,
+          return SliverList.builder(
             itemCount: state.books.length,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                 child: BestSellerListViewItem(
                   books: state.books[index],
                 ),
@@ -28,11 +27,15 @@ class BestSellerListView extends StatelessWidget {
             },
           );
         } else if (state is NewsetNewsFailure) {
-          return CustomErrorWidget(err: state.message);
+          return SliverToBoxAdapter(
+            child: CustomErrorWidget(err: state.message),
+          );
         }
-        return Transform.scale(
-          scale: Platform.isIOS ? 1.5 : 1.0,
-          child: const Center(child:  CircularProgressIndicator.adaptive()),
+        return SliverFillRemaining(
+          child: Transform.scale(
+            scale: Platform.isIOS ? 1.5 : 1.0,
+            child: const Center(child: CircularProgressIndicator.adaptive()),
+          ),
         );
       },
     );
